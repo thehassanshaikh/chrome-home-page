@@ -1,67 +1,78 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
 }
 
-body{
-    background-color: #0f0d0e;
-    height: 100vh;
-    font-family: 'Outfit', sans-serif;
+body {
+  background-color: #0f0d0e;
+  height: 100vh;
+  font-family: 'Outfit', sans-serif;
 
 }
 
 .main-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.timer{
-    font-size: 60px;
-    color: #f9f4da;
-    font-family: 'Paytone One', sans-serif;
+.timer {
+  font-size: 60px;
+  color: #f9f4da;
+  font-family: 'Paytone One', sans-serif;
 }
 
 /* searbar */
 
-.bar{
-    margin:0 auto;
-    width:575px;
-    border-radius:30px;
-    border:1px solid #dcdcdc;
-  }
-  .bar:hover{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-  }
-  .bar:focus-within{
-    box-shadow: 1px 1px 8px 1px #dcdcdc;
-    outline:none;
-  }
-
-  .searchbar {
-    height: 45px;
-    border: none;
-    width: 500px;
-    font-size: 16px;
-    outline: none;
-    background-color: #ffebcd00;
-    color: #ffff;
-    padding: 0 2.5%;
+.bar {
+  margin: 0 auto;
+  width: 575px;
+  border-radius: 30px;
+  border: 1px solid #dcdcdc;
 }
 
-  .voice{
-    height:20px;
-    position:relative;
-    top:5px;
-    left:10px;
-  }
+.bar:hover {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+}
 
-  .border-2{
-    border: 2px solid red;
-    width: 10px;
-    height: 10px;
-  }
+.bar:focus-within {
+  box-shadow: 1px 1px 8px 1px #dcdcdc;
+  outline: none;
+}
+
+.searchbar {
+  height: 45px;
+  border: none;
+  width: 500px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffebcd00;
+  color: #ffff;
+  padding: 0 2.5%;
+}
+
+.voice {
+  height: 20px;
+  position: relative;
+  top: 5px;
+  left: 10px;
+}
+
+.border-2 {
+  border: 2px solid red;
+  width: 10px;
+  height: 10px;
+}
+
+/* Customizer */
+.grid-parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
