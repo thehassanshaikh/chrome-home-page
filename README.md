@@ -1,2 +1,4 @@
 # chrome-home-page
-Redesign the chrome home 
+Redesigning the chrome home 
+
+This is currently under development 
