@@ -73,6 +73,15 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  color: #ffff;
 }
+
+.customizer-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.custom-items {}
