@@ -30,6 +30,13 @@ body {
   font-family: 'Paytone One', sans-serif;
 }
 
+.date,
+.day {
+  text-align: center;
+  color: red;
+}
+
+
 /* searbar */
 
 .bar {
