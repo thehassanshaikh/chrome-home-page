@@ -124,6 +124,9 @@ body {
 img.c-icon {
   width: 30px;
   height: auto;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 5px;
 }
 
 p.c-text {

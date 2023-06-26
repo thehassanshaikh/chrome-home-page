@@ -49,5 +49,7 @@ window.onload = function () {
 
 
 // clock function end
+const favIconUrl= "https://www.google.com/s2/favicons?domain=" //${domain}&sz=${size}
+
 
 
