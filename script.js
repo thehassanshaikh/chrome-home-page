@@ -49,7 +49,23 @@ window.onload = function () {
 
 
 // clock function end
-const favIconUrl= "https://www.google.com/s2/favicons?domain=" //${domain}&sz=${size}
 
+//function for google seach 
 
+function googleSearch(){
+  const text= document.getElementById("search").value;
+
+  let cleanQuery = text.replace(" ","+",text);
+  
+  let url='http://www.google.com/search?q='+cleanQuery;
+
+  window.location.href=url;
+}
+
+const searchtext = document.getElementById("search")
+searchtext.addEventListener("keydown",function(e){
+  if(e.code === "Enter"){
+    googleSearch();
+  }
+})
 
