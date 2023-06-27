@@ -2,6 +2,12 @@
 
 window.onload = function () {
   clock();
+
+  //on load focus on searchbar
+
+  document.getElementById("search").focus();
+
+
   function clock() {
     var now = new Date();
     var TwentyFourHour = now.getHours();
