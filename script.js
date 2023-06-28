@@ -75,3 +75,6 @@ searchtext.addEventListener("keydown",function(e){
   }
 })
 
+fetch('https://newsapi.org/v2/everything?q=Apple&from=2023-06-27&sortBy=popularity&apiKey=9014cfee69a3458495140e8aea005ff6',{headers: new Headers({"X-Requested-With":"hello"})})
+.then(res => res.json())
+.then(data => console.log(data))

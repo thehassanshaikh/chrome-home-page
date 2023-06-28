@@ -100,9 +100,9 @@ body {
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   color: #ffff;
-  /* border: 2px solid green; */
   padding: 1%;
   border-radius: 10%;
+  box-shadow: 10px 10px 1px 3px rgb(84 84 84 / 98%);
 }
 
 .grid-parent:first-child {
