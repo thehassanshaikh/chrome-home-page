@@ -1,4 +1,3 @@
-# chrome-home-page
-Redesigning the chrome home 
+So, after getting bored of Chrome's home page style, I redesign it for my own use.
 
-This is currently under development 
+You are free to tweak it and use it as you see fit.
