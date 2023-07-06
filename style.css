@@ -132,3 +132,45 @@ img.c-icon {
 p.c-text {
   font-size: 12px;
 }
+
+
+/* ================ form ========== */
+
+.form-section{
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+  margin: auto;
+  background-color: #f9f4da;
+  padding: 1%;
+  border-radius: 15px;
+}
+
+.inpt-box {
+  padding: 5px;
+  border: 1px solid rebeccapurple;
+  margin: 5px 5px 15px 0;
+  border-radius: 5px;
+}
+
+.form-section {
+  position: fixed;
+  top: 15%;
+  width: 100%;
+  height: auto;
+}
+
+.smt-btn {
+  width: 20%;
+  margin: auto;
+  padding: 2%;
+  background-color: #b573f7;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 5px;
+}
