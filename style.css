@@ -136,6 +136,9 @@ p.c-text {
 
 /* ================ form ========== */
 
+.from-container{
+  display: none;
+}
 
 
 .form-section form {
