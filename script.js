@@ -75,52 +75,10 @@ searchtext.addEventListener("keydown",function(e){
   }
 })
 
-// for link form
+// for opening link form
 
-// function handleSubmit(event){
-//   event.prevantDefault();
-//   // e.prevantDefault();
-//   // let link1 = document.getElementById("link-1").value;
-//   // let link2 = document.getElementById("link-2").value;
-//   // let link3 = document.getElementById("link-3").value;
-//   // let link4 = document.getElementById("link-4").value;
-//   // let link5 = document.getElementById("link-5").value;
-//   // let link6 = document.getElementById("link-6").value;
-//   // let link7 = document.getElementById("link-7").value;
-//   // let link8 = document.getElementById("link-8").value;
-  
-//   // console.log(link1 ,link2, link4)
+const linkFrom = document.querySelector("#linkFrom");
 
-//   const form  = document.getElementById("linkForm");
-//   const formData = new FormData(form);
-
-//   const data = {};
-//   for (const [key, value] of formData.entries()) {
-//     data[key] = value;
-//   }
-
-//   console.log('Form data stored:', data);
-
-  
-// }
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  const form = document.getElementById("linkForm");
-  const formData = new FormData(form);
-
-  const data = {};
-  for (const [key, value] of formData.entries()) {
-    data[key] = value;
-  }
-  const link1 = data["link-1"];
-  console.log(link1);
-  console.log('Form data stored:', data);
+function openForm(){
+  linkFrom.classList.add("show");
 }
-
-document.addEventListener('DOMContentLoaded', function() {
-  const vform = document.getElementById('linkForm');
-  vform.addEventListener('submit', handleSubmit);
-});
-

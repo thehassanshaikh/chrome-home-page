@@ -140,6 +140,10 @@ p.c-text {
   display: none;
 }
 
+.show{
+  display: block;
+}
+
 
 .form-section form {
   display: flex;
