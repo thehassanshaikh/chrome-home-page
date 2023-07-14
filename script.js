@@ -96,7 +96,37 @@ function handleForm(e){
 
   console.log(link1)
 
- const obj1 = {
+ const coloum1 = {
+    link_1: link1,
+    link_2: link2,
+    link_3: link3,
+    link_4: link4,
+    link_5: link5,
+    link_6: link6,
+    link_7: link7,
+    link_8: link8,
+  }
+ const coloum12 = {
+    link_1: link1,
+    link_2: link2,
+    link_3: link3,
+    link_4: link4,
+    link_5: link5,
+    link_6: link6,
+    link_7: link7,
+    link_8: link8,
+  }
+ const coloum3 = {
+    link_1: link1,
+    link_2: link2,
+    link_3: link3,
+    link_4: link4,
+    link_5: link5,
+    link_6: link6,
+    link_7: link7,
+    link_8: link8,
+  }
+ const coloum4 = {
     link_1: link1,
     link_2: link2,
     link_3: link3,
@@ -107,7 +137,7 @@ function handleForm(e){
     link_8: link8,
   }
 
-  console.log(obj1.link_1);
+ 
 
   
 } 
