@@ -77,8 +77,23 @@ searchtext.addEventListener("keydown",function(e){
 
 // for opening link form
 
-const linkFrom = document.querySelector("#linkFrom");
+const formSec = document.querySelector("#formSec");
 
 function openForm(){
-  linkFrom.classList.add("show");
+  formSec.classList.add("show");
+}
+
+function handleForm(e){
+  e.preventDefault();
+  const link1 = document.getElementById("link-1").value;
+  const link2 = document.getElementById("link-2").value;
+  const link3 = document.getElementById("link-3").value;
+  const link4 = document.getElementById("link-4").value;
+  const link5 = document.getElementById("link-5").value;
+  const link6 = document.getElementById("link-6").value;
+  const link7 = document.getElementById("link-7").value;
+  const link8 = document.getElementById("link-8").value;
+
+  console.log(link1)
+  
 }
