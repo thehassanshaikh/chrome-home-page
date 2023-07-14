@@ -95,5 +95,24 @@ function handleForm(e){
   const link8 = document.getElementById("link-8").value;
 
   console.log(link1)
+
+ const obj1 = {
+    link_1: link1,
+    link_2: link2,
+    link_3: link3,
+    link_4: link4,
+    link_5: link5,
+    link_6: link6,
+    link_7: link7,
+    link_8: link8,
+  }
+
+  console.log(obj1.link_1);
+
   
-}
+} 
+
+
+
+
+  
