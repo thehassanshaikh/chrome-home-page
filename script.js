@@ -50,7 +50,6 @@ window.onload = function () {
   }
 
 
-
 }
 
 
@@ -96,8 +95,8 @@ function handleForm(e) {
   const link7 = document.getElementById("link-7").value;
   const link8 = document.getElementById("link-8").value;
 
-  console.log(e);
-  console.log(clmnum);
+  // console.log(e);
+  // console.log(clmnum);
 
   if (clmnum == 1) {
     const coloum1 = {
@@ -113,7 +112,7 @@ function handleForm(e) {
     console.log(coloum1);
 
     // Put the object into storage
-  localStorage.setItem('coloum-1', JSON.stringify(coloum1));
+    localStorage.setItem('coloum-1', JSON.stringify(coloum1));
 
   } else if (clmnum == 2) {
     const coloum2 = {
@@ -141,7 +140,7 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum3);
-    localStorage.setItem('coloum-2', JSON.stringify(coloum3));
+    localStorage.setItem('coloum-3', JSON.stringify(coloum3));
 
   } else if (clmnum == 4) {
     const coloum4 = {
@@ -155,12 +154,21 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum4);
-    localStorage.setItem('coloum-2', JSON.stringify(coloum4));
+    localStorage.setItem('coloum-4', JSON.stringify(coloum4));
   }
   //hide hr form after sumiting
   formSec.classList.remove("show");
 
+
+  // Retrieve the object from storage
+  const rColoum1 = localStorage.getItem('coloum-1');
+
+  console.log('rColoum1:', JSON.parse(rColoum1));
+
+
 }
+
+
 
 
 
