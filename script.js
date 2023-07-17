@@ -58,19 +58,19 @@ window.onload = function () {
 
 //function for google seach 
 
-function googleSearch(){
-  const text= document.getElementById("search").value;
+function googleSearch() {
+  const text = document.getElementById("search").value;
 
-  let cleanQuery = text.replace(" ","+",text);
-  
-  let url='http://www.google.com/search?q='+cleanQuery;
+  let cleanQuery = text.replace(" ", "+", text);
 
-  window.location.href=url;
+  let url = 'http://www.google.com/search?q=' + cleanQuery;
+
+  window.location.href = url;
 }
 
 const searchtext = document.getElementById("search")
-searchtext.addEventListener("keydown",function(e){
-  if(e.code === "Enter"){
+searchtext.addEventListener("keydown", function (e) {
+  if (e.code === "Enter") {
     googleSearch();
   }
 })
@@ -78,12 +78,14 @@ searchtext.addEventListener("keydown",function(e){
 // for opening link form
 
 const formSec = document.querySelector("#formSec");
+let clmnum = 0;
 
-function openForm(){
+function openForm(num) {
   formSec.classList.add("show");
+  clmnum = num;
 }
 
-function handleForm(e){
+function handleForm(e) {
   e.preventDefault();
   const link1 = document.getElementById("link-1").value;
   const link2 = document.getElementById("link-2").value;
@@ -94,55 +96,62 @@ function handleForm(e){
   const link7 = document.getElementById("link-7").value;
   const link8 = document.getElementById("link-8").value;
 
-  console.log(link1)
+  console.log(e);
+  console.log(clmnum);
 
- const coloum1 = {
-    link_1: link1,
-    link_2: link2,
-    link_3: link3,
-    link_4: link4,
-    link_5: link5,
-    link_6: link6,
-    link_7: link7,
-    link_8: link8,
-  }
- const coloum12 = {
-    link_1: link1,
-    link_2: link2,
-    link_3: link3,
-    link_4: link4,
-    link_5: link5,
-    link_6: link6,
-    link_7: link7,
-    link_8: link8,
-  }
- const coloum3 = {
-    link_1: link1,
-    link_2: link2,
-    link_3: link3,
-    link_4: link4,
-    link_5: link5,
-    link_6: link6,
-    link_7: link7,
-    link_8: link8,
-  }
- const coloum4 = {
-    link_1: link1,
-    link_2: link2,
-    link_3: link3,
-    link_4: link4,
-    link_5: link5,
-    link_6: link6,
-    link_7: link7,
-    link_8: link8,
-  }
+  if (clmnum == 1) {
+    const coloum1 = {
+      link_1: link1,
+      link_2: link2,
+      link_3: link3,
+      link_4: link4,
+      link_5: link5,
+      link_6: link6,
+      link_7: link7,
+      link_8: link8,
+    }
+    console.log(coloum1);
+  } else if (clmnum == 2) {
+    const coloum2 = {
+      link_1: link1,
+      link_2: link2,
+      link_3: link3,
+      link_4: link4,
+      link_5: link5,
+      link_6: link6,
+      link_7: link7,
+      link_8: link8,
+    }
+  } else if (clmnum == 3) {
+    const coloum3 = {
+      link_1: link1,
+      link_2: link2,
+      link_3: link3,
+      link_4: link4,
+      link_5: link5,
+      link_6: link6,
+      link_7: link7,
+      link_8: link8,
+    }
+  } else if (clmnum == 4) {
+    const coloum4 = {
+      link_1: link1,
+      link_2: link2,
+      link_3: link3,
+      link_4: link4,
+      link_5: link5,
+      link_6: link6,
+      link_7: link7,
+      link_8: link8,
+    }
 
- 
+  }
 
   
-} 
+
+
+}
 
 
 
 
-  
