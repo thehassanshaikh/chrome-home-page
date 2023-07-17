@@ -122,6 +122,7 @@ function handleForm(e) {
       link_7: link7,
       link_8: link8,
     }
+    console.log(coloum2);
   } else if (clmnum == 3) {
     const coloum3 = {
       link_1: link1,
@@ -133,6 +134,7 @@ function handleForm(e) {
       link_7: link7,
       link_8: link8,
     }
+    console.log(coloum3);
   } else if (clmnum == 4) {
     const coloum4 = {
       link_1: link1,
@@ -144,11 +146,8 @@ function handleForm(e) {
       link_7: link7,
       link_8: link8,
     }
-
+    console.log(coloum4);
   }
-
-  
-
 
 }
 
