@@ -111,6 +111,10 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum1);
+
+    // Put the object into storage
+  localStorage.setItem('coloum-1', JSON.stringify(coloum1));
+
   } else if (clmnum == 2) {
     const coloum2 = {
       link_1: link1,
@@ -123,6 +127,8 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum2);
+    localStorage.setItem('coloum-2', JSON.stringify(coloum2));
+
   } else if (clmnum == 3) {
     const coloum3 = {
       link_1: link1,
@@ -135,6 +141,8 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum3);
+    localStorage.setItem('coloum-2', JSON.stringify(coloum3));
+
   } else if (clmnum == 4) {
     const coloum4 = {
       link_1: link1,
@@ -147,7 +155,10 @@ function handleForm(e) {
       link_8: link8,
     }
     console.log(coloum4);
+    localStorage.setItem('coloum-2', JSON.stringify(coloum4));
   }
+  //hide hr form after sumiting
+  formSec.classList.remove("show");
 
 }
 
