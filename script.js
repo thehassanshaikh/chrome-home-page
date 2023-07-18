@@ -116,6 +116,13 @@ function handleForm(e) {
     // Put the object into storage
     localStorage.setItem('coloum-1', JSON.stringify(coloum1));
 
+    const cd1 = JSON.parse(localStorage.getItem('coloum-1'));
+
+    for(let i = 1;i<=8;i++){
+      document.getElementById('c1' + i).href = cd1[`link_${i}`];
+      // console.log(cd1[`link_${i}`]); 
+    }
+      
   } else if (clmnum == 2) {
     const coloum2 = {
       link_1: link1,
@@ -129,6 +136,12 @@ function handleForm(e) {
     }
     console.log(coloum2);
     localStorage.setItem('coloum-2', JSON.stringify(coloum2));
+
+    const cd2 = JSON.parse(localStorage.getItem('coloum-2'));
+
+    for(let i = 1;i<=8;i++){
+      document.getElementById('c2' + i).href = cd2[`link_${i}`];
+    }
 
   } else if (clmnum == 3) {
     const coloum3 = {
@@ -144,6 +157,12 @@ function handleForm(e) {
     console.log(coloum3);
     localStorage.setItem('coloum-3', JSON.stringify(coloum3));
 
+    const cd3 = JSON.parse(localStorage.getItem('coloum-2'));
+
+    for(let i = 1;i<=8;i++){
+      document.getElementById('c3' + i).href = cd3[`link_${i}`];
+    }
+
   } else if (clmnum == 4) {
     const coloum4 = {
       link_1: link1,
@@ -157,18 +176,25 @@ function handleForm(e) {
     }
     console.log(coloum4);
     localStorage.setItem('coloum-4', JSON.stringify(coloum4));
+
+    const cd4 = JSON.parse(localStorage.getItem('coloum-2'));
+
+    for(let i = 1;i<=8;i++){
+      document.getElementById('c4' + i).href = cd4[`link_${i}`];
+    }
   }
   //hide hr form after sumiting
   formSec.classList.remove("show");
 
-
   // Retrieve the object from storage
-  const rColoum1 = localStorage.getItem('coloum-1');
-
-  console.log('rColoum1:', JSON.parse(rColoum1));
+ 
+  
 
   //reset the value to null
   form.reset();
   return
 }
 
+
+ 
+ 
