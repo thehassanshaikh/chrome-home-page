@@ -74,6 +74,8 @@ searchtext.addEventListener("keydown", function (e) {
   }
 })
 
+const form = document.getElementById('linkForm');
+
 // for opening link form
 
 const formSec = document.querySelector("#formSec");
@@ -165,11 +167,8 @@ function handleForm(e) {
 
   console.log('rColoum1:', JSON.parse(rColoum1));
 
-
+  //reset the value to null
+  form.reset();
+  return
 }
-
-
-
-
-
 
