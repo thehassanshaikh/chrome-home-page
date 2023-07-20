@@ -161,6 +161,17 @@ p.c-text {
   border: 1px solid rebeccapurple;
   margin: 5px 5px 15px 0;
   border-radius: 5px;
+  width: 70%;
+}
+
+.inpt-box:nth-child(even) {
+  /* background-color: red; */
+  width: 25%;
+}
+
+label.lable-text {
+  display: block;
+  font-family: monospace;
 }
 
 .form-section {
