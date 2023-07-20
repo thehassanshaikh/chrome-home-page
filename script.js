@@ -50,6 +50,8 @@ window.onload = function () {
   }
 
 
+
+
 }
 
 
@@ -74,6 +76,22 @@ searchtext.addEventListener("keydown", function (e) {
   }
 })
 
+// Function for extrating the doamin name form the URl
+
+function getDomainName(url) {
+  let domainName;
+
+  // Remove the protocol (http, https, etc.) and www from the URL
+  let domainRegex = /^(?:https?:\/\/)?(?:www\.)?([^/?]+)/i;
+  let matches = url.match(domainRegex);
+
+  if (matches && matches.length >= 2) {
+    domainName = matches[1];
+  }
+
+  return domainName;
+}
+
 const form = document.getElementById('linkForm');
 
 // for opening link form
@@ -86,6 +104,7 @@ function openForm(num) {
   clmnum = num;
 }
 
+// ---------- handleing form ------------------//
 function handleForm(e) {
   e.preventDefault();
   const link1 = document.getElementById("link-1").value;
@@ -105,46 +124,44 @@ function handleForm(e) {
   const link8 = document.getElementById("link-8").value;
   const name8 = document.getElementById("linkName-8").value;
 
-  // console.log(e);
-  // console.log(clmnum);
 
   if (clmnum == 1) {
     const coloum1 = {
       link_1: {
-        link:link1,
-        name:name1
+        link: link1,
+        name: name1
       },
       link_2: {
-        link:link2,
-        name:name2
+        link: link2,
+        name: name2
       },
       link_3: {
-        link:link3,
-        name:name3
+        link: link3,
+        name: name3
       },
       link_4: {
-        link:link4,
-        name:name4
+        link: link4,
+        name: name4
       },
       link_5: {
-        link:link5,
-        name:name5
+        link: link5,
+        name: name5
       },
       link_6: {
-        link:link6,
-        name:name6
+        link: link6,
+        name: name6
       },
       link_7: {
-        link:link7,
-        name:name7
+        link: link7,
+        name: name7
       },
       link_8: {
-        link:link8,
-        name:name8
+        link: link8,
+        name: name8
       },
     }
     console.log(coloum1);
-  
+
     // Put the object into storage
     localStorage.setItem('coloum-1', JSON.stringify(coloum1));
 
@@ -152,45 +169,53 @@ function handleForm(e) {
 
     console.log(cd1);
 
-    for(let i = 1;i<=8;i++){
-      document.getElementById('c1' + i).href = cd1[`link_${i}`].link;
+    for (let i = 1; i <= 8; i++) {
+
+      let link = cd1[`link_${i}`].link;
+
+      let domainName = getDomainName(link);
+      console.log(domainName);
+
+      document.getElementById('c1' + i).href = link;
       document.getElementById('name1' + i).innerHTML = cd1[`link_${i}`].name;
-      // console.log(cd1[`link_${i}`].link); 
+      document.getElementById('icon1' + i).src =  "https://icon.horse/icon/"+domainName;
+      // console.log(cd1[`link_${i}`].link);
+
     }
-      
+
   } else if (clmnum == 2) {
     const coloum2 = {
       link_1: {
-        link:link1,
-        name:name1
+        link: link1,
+        name: name1
       },
       link_2: {
-        link:link2,
-        name:name2
+        link: link2,
+        name: name2
       },
       link_3: {
-        link:link3,
-        name:name3
+        link: link3,
+        name: name3
       },
       link_4: {
-        link:link4,
-        name:name4
+        link: link4,
+        name: name4
       },
       link_5: {
-        link:link5,
-        name:name5
+        link: link5,
+        name: name5
       },
       link_6: {
-        link:link6,
-        name:name6
+        link: link6,
+        name: name6
       },
       link_7: {
-        link:link7,
-        name:name7
+        link: link7,
+        name: name7
       },
       link_8: {
-        link:link8,
-        name:name8
+        link: link8,
+        name: name8
       },
     }
     console.log(coloum2);
@@ -198,44 +223,51 @@ function handleForm(e) {
 
     const cd2 = JSON.parse(localStorage.getItem('coloum-2'));
 
-    for(let i = 1;i<=8;i++){
-      document.getElementById('c2' + i).href = cd2[`link_${i}`].link;
-      document.getElementById('name2' + i).innerHTML = cd2[`link_${i}`].name;
-    }
+    for (let i = 1; i <= 8; i++) {
 
+      let link = cd2[`link_${i}`].link;
+
+      let domainName = getDomainName(link);
+      console.log(domainName);
+
+      document.getElementById('c2' + i).href = link;
+      document.getElementById('name2' + i).innerHTML = cd2[`link_${i}`].name;
+      document.getElementById('icon2' + i).src =  "https://icon.horse/icon/"+domainName;
+
+    }
   } else if (clmnum == 3) {
     const coloum3 = {
       link_1: {
-        link:link1,
-        name:name1
+        link: link1,
+        name: name1
       },
       link_2: {
-        link:link2,
-        name:name2
+        link: link2,
+        name: name2
       },
       link_3: {
-        link:link3,
-        name:name3
+        link: link3,
+        name: name3
       },
       link_4: {
-        link:link4,
-        name:name4
+        link: link4,
+        name: name4
       },
       link_5: {
-        link:link5,
-        name:name5
+        link: link5,
+        name: name5
       },
       link_6: {
-        link:link6,
-        name:name6
+        link: link6,
+        name: name6
       },
       link_7: {
-        link:link7,
-        name:name7
+        link: link7,
+        name: name7
       },
       link_8: {
-        link:link8,
-        name:name8
+        link: link8,
+        name: name8
       },
     }
     console.log(coloum3);
@@ -243,44 +275,52 @@ function handleForm(e) {
 
     const cd3 = JSON.parse(localStorage.getItem('coloum-3'));
 
-    for(let i = 1;i<=8;i++){
-      document.getElementById('c3' + i).href = cd3[`link_${i}`].link;
+    for (let i = 1; i <= 8; i++) {
+
+      let link = cd3[`link_${i}`].link;
+
+      let domainName = getDomainName(link);
+      console.log(domainName);
+
+      document.getElementById('c3' + i).href = link;
       document.getElementById('name3' + i).innerHTML = cd3[`link_${i}`].name;
+      document.getElementById('icon3' + i).src =  "https://icon.horse/icon/"+domainName;
+
     }
 
   } else if (clmnum == 4) {
     const coloum4 = {
       link_1: {
-        link:link1,
-        name:name1
+        link: link1,
+        name: name1
       },
       link_2: {
-        link:link2,
-        name:name2
+        link: link2,
+        name: name2
       },
       link_3: {
-        link:link3,
-        name:name3
+        link: link3,
+        name: name3
       },
       link_4: {
-        link:link4,
-        name:name4
+        link: link4,
+        name: name4
       },
       link_5: {
-        link:link5,
-        name:name5
+        link: link5,
+        name: name5
       },
       link_6: {
-        link:link6,
-        name:name6
+        link: link6,
+        name: name6
       },
       link_7: {
-        link:link7,
-        name:name7
+        link: link7,
+        name: name7
       },
       link_8: {
-        link:link8,
-        name:name8
+        link: link8,
+        name: name8
       },
     }
     console.log(coloum4);
@@ -288,9 +328,17 @@ function handleForm(e) {
 
     const cd4 = JSON.parse(localStorage.getItem('coloum-2'));
 
-    for(let i = 1;i<=8;i++){
-      document.getElementById('c4' + i).href = cd4[`link_${i}`].link;
+    for (let i = 1; i <= 8; i++) {
+
+      let link = cd4[`link_${i}`].link;
+
+      let domainName = getDomainName(link);
+      console.log(domainName);
+
+      document.getElementById('c4' + i).href = link;
       document.getElementById('name4' + i).innerHTML = cd4[`link_${i}`].name;
+      document.getElementById('icon4' + i).src =  "https://icon.horse/icon/"+domainName;
+
     }
   }
 
@@ -298,8 +346,8 @@ function handleForm(e) {
   formSec.classList.remove("show");
 
   // Retrieve the object from storage
- 
-  
+
+
 
   //reset the value to null
   form.reset();
@@ -307,5 +355,4 @@ function handleForm(e) {
 }
 
 
- 
- 
+
