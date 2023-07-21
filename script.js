@@ -7,6 +7,13 @@ window.onload = function () {
 
   document.getElementById("search").focus();
 
+    // Get the data from local storage when the DOM loads
+    const cd1 = JSON.parse(localStorage.getItem('coloum-1'));
+    const cd2 = JSON.parse(localStorage.getItem('coloum-2'));
+    const cd3 = JSON.parse(localStorage.getItem('coloum-3'));
+    const cd4 = JSON.parse(localStorage.getItem('coloum-4'));
+
+
 
   function clock() {
     var now = new Date();
@@ -49,12 +56,43 @@ window.onload = function () {
 
   }
 
+    // Update the DOM using the retrieved data from local storage
 
+  for (let i = 1; i <= 8; i++) {
+    let link = cd1[`link_${i}`].link;
+    let domainName = getDomainName(link);
+    document.getElementById('c1' + i).href = link;
+    document.getElementById('name1' + i).innerHTML = cd1[`link_${i}`].name;
+    document.getElementById('icon1' + i).src = "https://icon.horse/icon/" + domainName;
+  }
 
+  for (let i = 1; i <= 8; i++) {
+    let link = cd2[`link_${i}`].link;
+    let domainName = getDomainName(link);
+    document.getElementById('c2' + i).href = link;
+    document.getElementById('name2' + i).innerHTML = cd2[`link_${i}`].name;
+    document.getElementById('icon2' + i).src = "https://icon.horse/icon/" + domainName;
+  }
+
+  for (let i = 1; i <= 8; i++) {
+    let link = cd3[`link_${i}`].link;
+    let domainName = getDomainName(link);
+    document.getElementById('c3' + i).href = link;
+    document.getElementById('name3' + i).innerHTML = cd3[`link_${i}`].name;
+    document.getElementById('icon3' + i).src = "https://icon.horse/icon/" + domainName;
+  }
+
+  for (let i = 1; i <= 8; i++) {
+    let link = cd4[`link_${i}`].link;
+    let domainName = getDomainName(link);
+    document.getElementById('c4' + i).href = link;
+    document.getElementById('name4' + i).innerHTML = cd4[`link_${i}`].name;
+    document.getElementById('icon4' + i).src = "https://icon.horse/icon/" + domainName;
+  }
+
+  
 
 }
-
-
 // clock function end
 
 //function for google seach 
