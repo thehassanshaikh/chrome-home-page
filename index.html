@@ -239,7 +239,7 @@
     </section>
     <section class="from-container" id="formSec">
         <div class="form-section">
-            <form id="linkForm" onsubmit="handleForm(event)">
+            <form id="linkForm">
                 <div class="box-container">
                     <label for="link 1" class="lable-text">Link 1</label>
                     <input type="text" id="linkName-1" class="inpt-box" placeholder="Name">
@@ -281,7 +281,7 @@
                     <input type="text" id="link-8" class="inpt-box" placeholder="Website URL">
                 </div>
 
-                <button type="submit"  class="smt-btn">Save</button>
+                <button type="submit" onclick="handleForm(event)" class="smt-btn">Save</button>
             </form>
         </div>
     </section>
